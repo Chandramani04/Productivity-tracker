@@ -41,7 +41,8 @@ To enable GitHub Pages for your repository:
 
 5. **Access Your Site**:
    - Once the workflow completes (usually takes 1-2 minutes), your site will be available at:
-   - `https://chandramani04.github.io/Productivity-tracker/`
+   - `https://<your-username>.github.io/<repository-name>/`
+   - For this repository: `https://chandramani04.github.io/Productivity-tracker/`
    - You can find the exact URL in the Pages settings or in the workflow deployment output
 
 ### Workflow Details
@@ -61,6 +62,12 @@ The workflow runs on:
 To run this project locally:
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/<repository-name>.git
+   cd <repository-name>
+   ```
+   
+   For this repository:
    ```bash
    git clone https://github.com/Chandramani04/Productivity-tracker.git
    cd Productivity-tracker
