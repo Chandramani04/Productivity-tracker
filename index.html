@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- add favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+</head>
+
+<body>
+    <!-- creating a productivity dashboard -->
+    <div id="main">
+        <section class="allElements">
+
+            <header>
+                <!-- weather dashboard  -->
+                <div class="header1">
+                   <h1>Varanasi India</h1>
+                   <h4>Monday , 1:00 PM</h4>
+                   <h2>20 °C</h2>
+                </div>
+                <div class="header2">
+                    <h3>Precipitation: 10%</h3>
+                    <h3>Humidity: 60%</h3>
+                    <h3>Feels Like: 22 °C</h3>
+                    <h3>Wind Speed: 15 km/h</h3>
+                    <h4>Light Rain</h4>
+                </div>
+            </header>
+
+            <div class="allFeatures">
+                <div class="todo elem" id="0">
+                    <img src="https://plus.unsplash.com/premium_photo-1710962184909-f9f8dc2c9f5f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fDNkfGVufDB8fDB8fHww"
+                        alt="">
+                    <h2>To Do</h2>
+                </div>
+                <div class="daily elem" id="1">
+                    <img src="https://plus.unsplash.com/premium_photo-1681487870238-4a2dfddc6bcb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fHRvZG98ZW58MHx8MHx8fDA%3D"
+                        alt="">
+                    <h2>Daily Planner</h2>
+                </div>
+                <div class="motivation elem" id="2">
+                    <img src="https://images.unsplash.com/photo-1537444532052-2afbf769b76c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1vdGl2YXRpb258ZW58MHx8MHx8fDA%3D"
+                        alt="">
+                    <h2>Motivation</h2>
+                </div>
+                <div class="pomodoro elem" id="3">
+                    <img src="https://images.unsplash.com/photo-1641567926412-7a6158b8e81f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRpbWVyfGVufDB8fDB8fHww"
+                        alt="">
+                    <h2>Pomodoro Timer</h2>
+                </div>
+                <!-- <div class="goals elem" id="4">
+                    <img src="https://images.unsplash.com/photo-1718202248232-0cdbc15d29b2?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>Goals</h2>
+                </div> -->
+            </div>
+
+        </section>
+
+        <section class="FullElements todo-full-page">
+            <button class="backBtn" id="0">
+                <!-- <i class="ri-close-line"></i> -->
+                Close
+            </button>
+            <h2>Your Personalized Task List</h2>
+
+            <div class="todo-container">
+                <div class="addTask">
+                    <form>
+                        <input type="text" placeholder="Add a new task" id="taskInput">
+                        <textarea name="taskDescription" id="taskDescription"
+                            placeholder="Enter Task Description"></textarea>
+                        <div class="mark-imp">
+                            <input type="checkbox" id="important">
+                            <label for="important">Mark as Important</label>
+                        </div>
+
+                        <button type="submit" id="addTaskBtn">Add Task</button>
+                    </form>
+                </div>
+                <div class="allTask">
+                    <!-- <div class="task">
+                        <h3>Task 1
+                            <span>Imp.</span>
+                        </h3>
+                        <p>Complete frontend project</p>
+                        <button class="deleteTaskBtn">
+                            Mark as Completed
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <section class="FullElements daily-planner-full-page">
+            <button class="backBtn" id="1">
+                Close
+            </button>
+            <h2>Daily Planner</h2>
+            <div class="day-planner">
+                <!-- <div class="time-slots">
+                    <p>6:00 - 7:00</p>
+                    <input type="text" placeholder="..." id="time-slot-0">
+                    <button class="clear-btn" id="clear-btn-0">Clear</button>
+                </div>
+                <div class="time-slots">
+                    <p>7:00 - 8:00</p>
+                    <input type="text" placeholder="..." id="time-slot-1">
+                    <button class="clear-btn" id="clear-btn-1">Clear</button>
+                </div> -->
+
+            </div>
+
+        </section>
+        <section class="FullElements motivation-full-page">
+            <button class="backBtn" id="2">
+                <!-- <i class="ri-close-line"></i> -->
+                Close
+            </button>
+            <!-- <h2>Today's Motivational Quote</h2> -->
+
+            <div class="motivation-fullPageWrapper">
+                <div class="quote-container">
+                    <div class="motivation-wrapper">
+                        <div class="title">
+                            <h2>Quote of the day</h2>
+                        </div>
+                        <div class="quote">
+                            <!-- <div class="quote-text">
+                                "The only way to do great work is to love what you do."
+                            </div>
+                            <div class="quote-author">
+                                - Steve Jobs
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="FullElements pomodoro-full-page">
+            <button class="backBtn" id="3">
+                <!-- <i class="ri-close-line"></i> -->
+                Close
+            </button>
+            <h2>Study with me!</h2>
+            <h4>Work Session</h4>
+            <div class="pomodoro-timer">
+                <div class="timer-display">
+                    25:00
+                </div>
+                <div class="timer-controls">
+                    <button class="startBtn">Start</button>
+                    <button class="pauseBtn">Pause</button>
+                    <button class="resetBtn">Reset</button>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="FullElements goals-full-page">
+            <button class="backBtn" id="4">
+                Close
+            </button>
+            <h1>Goals</h1>
+        </section> -->
+    </div>
+</body>
+
+</html>

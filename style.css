@@ -1,0 +1,479 @@
+:root {
+  --primary-color: #f8f4e1;
+  --secondary-color: #3f4e4f;
+  --ternary-color1: #f8b007e1;
+  --ternary-color2: #b4846c;
+  --font-family: "SF Pro Display", sans-serif;
+  --bg-color: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+
+section.allElements {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  position: absolute;
+  overflow: auto;
+}
+section.allElements .allFeatures {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+section.allElements .allFeatures .elem {
+  background-color: var(--ternary-color1);
+  height: 400px;
+  width: 300px;
+  font-size: 30px;
+  border-radius: 14px;
+  position: relative;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+section.allElements .allFeatures .elem:hover {
+  scale: 1.03;
+}
+section.allElements .allFeatures .elem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 14px;
+}
+section.allElements .allFeatures .elem h2 {
+  position: absolute;
+  bottom: 4%;
+  right: 5%;
+  font-size: 2rem;
+  color: rgb(207, 207, 27);
+}
+section.allElements header {
+  height: 40%;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1419833173245-f59e1b93f9ee?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2t5fGVufDB8MHwwfHx8MA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px;
+}
+section.allElements header .header1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+section.allElements header .header2 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+section.FullElements {
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  display: none;
+  position: absolute;
+}
+section.FullElements .backBtn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px auto;
+  padding: 13px 13px;
+  position: absolute;
+  right: 5%;
+  border-radius: 20px;
+  background-color: rgb(26, 204, 231);
+  border: none;
+  color: var(--primary-color);
+  transition: all ease 0.2s;
+}
+section.FullElements .backBtn:hover {
+  background-color: red;
+}
+
+section.todo-full-page {
+  background-color: #111;
+}
+section.todo-full-page h2 {
+  font-size: 4.5rem;
+  margin: 20px;
+  text-align: center;
+}
+section.todo-full-page .todo-container {
+  height: 70%;
+  margin: 40px auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.todo-full-page .todo-container .addTask {
+  width: 33%;
+  height: 100%;
+  background-color: grey;
+  border-radius: 20px;
+  padding: 20px;
+}
+section.todo-full-page .todo-container .addTask form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+section.todo-full-page .todo-container .addTask form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+section.todo-full-page .todo-container .addTask form textarea {
+  width: 100%;
+  min-height: 180px;
+  max-height: 300px;
+  resize: vertical;
+  box-sizing: border-box;
+  padding: 12px;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  overflow-y: auto;
+}
+section.todo-full-page .todo-container .addTask form .mark-imp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+section.todo-full-page .todo-container .addTask form .mark-imp input {
+  accent-color: green;
+  width: 30px;
+  height: 40px;
+  border-radius: 8px;
+}
+section.todo-full-page .todo-container .addTask form .mark-imp label {
+  font-size: 1.4rem;
+}
+section.todo-full-page .todo-container .addTask form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(26, 204, 231);
+  color: var(--primary-color);
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+section.todo-full-page .todo-container .addTask form button:hover {
+  background-color: var(--ternary-color1);
+}
+section.todo-full-page .todo-container .allTask {
+  width: 60%;
+  height: 100%;
+  background-color: grey;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  overflow: auto;
+}
+section.todo-full-page .todo-container .allTask .task {
+  width: 100%;
+  background-color: var(--ternary-color1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.todo-full-page .todo-container .allTask .task h3 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+section.todo-full-page .todo-container .allTask .task span {
+  border: 2px solid red;
+  margin-left: 5px;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  border-radius: 25px;
+  color: red;
+  background-color: var(--primary-color);
+}
+section.todo-full-page .todo-container .allTask .task span.true {
+  opacity: 1;
+}
+section.todo-full-page .todo-container .allTask .task span.false {
+  opacity: 0;
+}
+section.todo-full-page .todo-container .allTask .task p {
+  font-size: 1.2rem;
+}
+section.todo-full-page .todo-container .allTask .task .deleteTaskBtn {
+  padding: 8px 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  color: red;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+section.todo-full-page .todo-container .allTask .task .deleteTaskBtn:hover {
+  color: whitesmoke;
+  background-color: green;
+}
+
+section.daily-planner-full-page {
+  background-color: #111;
+}
+section.daily-planner-full-page h2 {
+  font-size: 4.5rem;
+  margin: 20px;
+  text-align: center;
+}
+section.daily-planner-full-page .day-planner {
+  background-color: gray;
+  width: 95%;
+  height: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  overflow: auto;
+}
+section.daily-planner-full-page .day-planner .time-slots {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  width: 49%;
+  margin-bottom: 10px;
+}
+section.daily-planner-full-page .day-planner .time-slots p {
+  position: absolute;
+  top: 10%;
+  left: 0.8%;
+  font-size: 1.3rem;
+  color: var(--ternary-color1);
+}
+section.daily-planner-full-page .day-planner .time-slots input {
+  color: blanchedalmond;
+  font-size: 1.6rem;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+section.daily-planner-full-page .day-planner .time-slots .clear-btn {
+  position: absolute;
+  top: 10%;
+  right: 0.8%;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: red;
+  color: var(--primary-color);
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+section.daily-planner-full-page .day-planner .time-slots .clear-btn:hover {
+  background-color: var(--ternary-color1);
+  color: black;
+}
+
+section.motivation-full-page {
+  background-color: #111;
+  position: relative;
+}
+section.motivation-full-page h2 {
+  font-size: 4.5rem;
+  margin: 20px auto;
+  text-align: center;
+  letter-spacing: 3px;
+}
+section.motivation-full-page .motivation-fullPageWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.motivation-full-page .motivation-fullPageWrapper .quote-container {
+  height: 60%;
+  width: 40%;
+  margin: 40px auto;
+  background-color: grey;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.motivation-full-page .motivation-fullPageWrapper .quote-container .motivation-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(129, 165, 110);
+  border-radius: 25px;
+  color: blanchedalmond;
+  padding: 10px;
+}
+section.motivation-full-page .motivation-fullPageWrapper .quote-container .motivation-wrapper .title {
+  height: 20%;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #b4846c;
+  border-radius: 25px;
+  border-bottom: 2px solid var(--primary-color);
+}
+section.motivation-full-page .motivation-fullPageWrapper .quote-container .motivation-wrapper .title h2 {
+  font-size: 3rem;
+}
+section.motivation-full-page .motivation-fullPageWrapper .quote-container .motivation-wrapper .quote {
+  height: 80%;
+  width: 90%;
+  margin: 10px auto;
+  padding: 15px;
+}
+section.motivation-full-page .motivation-fullPageWrapper .quote-container .motivation-wrapper .quote .quote-text {
+  margin-top: 40px;
+  font-size: 2.2rem;
+  line-height: 1.3;
+}
+section.motivation-full-page .motivation-fullPageWrapper .quote-container .motivation-wrapper .quote .quote-author {
+  font-size: 2rem;
+  margin-top: 40px;
+  text-align: right;
+  font-style: italic;
+  color: rgb(34, 63, 141);
+}
+section.motivation-full-page .motivation-fullPageWrapper .quote-container::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: var(--ternary-color1);
+  border-radius: 25px;
+  scale: 1.2;
+  z-index: -1;
+  filter: blur(80px);
+}
+
+section.pomodoro-full-page {
+  background-color: #111;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section.pomodoro-full-page h2 {
+  font-size: 4rem;
+  margin: 20px auto;
+}
+section.pomodoro-full-page h4 {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 3rem;
+  margin: 20px auto;
+  padding: 10px 26px;
+  border-radius: 15px;
+  text-align: center;
+  color: var(--ternary-color1);
+  background-color: #097436;
+}
+section.pomodoro-full-page .pomodoro-timer {
+  height: 300px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: grey;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+section.pomodoro-full-page .pomodoro-timer .timer-display {
+  font-size: 7rem;
+  padding: 10px;
+  font-weight: 800;
+}
+section.pomodoro-full-page .pomodoro-timer .timer-controls {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+section.pomodoro-full-page .pomodoro-timer .timer-controls button {
+  padding: 10px 18px;
+  margin: 2px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgb(26, 204, 231);
+  color: var(--primary-color);
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+section.pomodoro-full-page .pomodoro-timer .timer-controls button:hover {
+  background-color: var(--ternary-color1);
+  box-shadow: 0px 0px 0px black;
+}/*# sourceMappingURL=style.css.map */
