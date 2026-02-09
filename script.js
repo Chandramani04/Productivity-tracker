@@ -5,7 +5,12 @@ function openFeatures() {
 
     allElems.forEach(function (ele) {
         ele.addEventListener('click', function () {
-            fullElem[ele.id].style.display = 'block';
+            const target = fullElem[ele.id];
+            if (target.classList.contains('motivation-full-page') || target.classList.contains('pomodoro-full-page')) {
+                target.style.display = 'flex';
+            } else {
+                target.style.display = 'block';
+            }
         })
     });
 
@@ -295,6 +300,94 @@ async function fetchWeather() {
     `;
 }
 fetchWeather();
+
+
+// implement a daily goals feature 
+
+function dailyGoal() {
+    const goalInput = document.getElementById('dailyGoalInput');
+    const addGoalBtn = document.getElementById('addGoalBtn');
+    
+    // Check if elements exist before proceeding
+    if (!goalInput || !addGoalBtn) return;
+
+    const goalContainer = document.querySelector('.goal-container');
+    const displayGoalContainer = document.querySelector('.display-goal');
+    const addGoalContainer = document.querySelector('.add-goal');
+
+    // Load goal from local storage
+    let savedGoal = localStorage.getItem('dailyGoal');
+    if (savedGoal) {
+        savedGoal = JSON.parse(savedGoal);
+    }
+
+    function renderGoal() {
+        if (savedGoal) {
+            displayGoalContainer.innerHTML = `
+                <div class="goal-item ${savedGoal.completed ? 'completed' : ''}">
+                    <h3>${savedGoal.text}</h3>
+                    <div class="actions">
+                        <button class="checkBtn">${savedGoal.completed ? 'Undo' : 'Done'}</button>
+                        <button class="deleteBtn">Delete</button>
+                    </div>
+                </div>
+            `;
+            
+            // Add event listeners for the dynamic elements
+            const checkBtn = displayGoalContainer.querySelector('.checkBtn');
+            const deleteBtn = displayGoalContainer.querySelector('.deleteBtn');
+            
+            if(checkBtn) checkBtn.addEventListener('click', toggleGoal);
+            if(deleteBtn) deleteBtn.addEventListener('click', deleteGoal);
+            
+            // Hide input if goal exists
+            addGoalContainer.style.display = 'none';
+        } else {
+            displayGoalContainer.innerHTML = '';
+            addGoalContainer.style.display = 'flex';
+            goalInput.value = '';
+        }
+    }
+
+    function addGoal() {
+        const goalText = goalInput.value.trim();
+        if (goalText) {
+            savedGoal = {
+                text: goalText,
+                completed: false
+            };
+            localStorage.setItem('dailyGoal', JSON.stringify(savedGoal));
+            renderGoal();
+        }
+    }
+
+    function toggleGoal() {
+        if (savedGoal) {
+            savedGoal.completed = !savedGoal.completed;
+            localStorage.setItem('dailyGoal', JSON.stringify(savedGoal));
+            renderGoal();
+        }
+    }
+
+    function deleteGoal() {
+        savedGoal = null;
+        localStorage.removeItem('dailyGoal');
+        renderGoal();
+    }
+
+    addGoalBtn.addEventListener('click', addGoal);
+    
+    // Allow pressing Enter to add goal
+    goalInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            addGoal();
+        }
+    });
+
+    renderGoal();
+}
+dailyGoal();
+
 
 
 

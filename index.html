@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productivity Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
@@ -55,11 +58,11 @@
                         alt="">
                     <h2>Pomodoro Timer</h2>
                 </div>
-                <!-- <div class="goals elem" id="4">
+                <div class="goals elem" id="4">
                     <img src="https://images.unsplash.com/photo-1718202248232-0cdbc15d29b2?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="">
                     <h2>Goals</h2>
-                </div> -->
+                </div>
             </div>
 
         </section>
@@ -162,12 +165,21 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="FullElements goals-full-page">
+        <section class="FullElements goals-full-page">
             <button class="backBtn" id="4">
                 Close
             </button>
-            <h1>Goals</h1>
-        </section> -->
+            <h2>My Daily Goal</h2>
+            <div class="goal-container">
+                <div class="add-goal">
+                    <input type="text" id="dailyGoalInput" placeholder="What is your main goal for today?">
+                    <button id="addGoalBtn">Set Goal</button>
+                </div>
+                <div class="display-goal">
+                    <!-- Goal will be displayed here -->
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 
